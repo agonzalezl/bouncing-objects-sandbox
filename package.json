@@ -1,5 +1,6 @@
 {
-  "name": "root",
+  "name": "bouncing-objects-sandbox",
+  "homepage": "https://agonzalezl.github.io/bouncing-objects-sandbox",
   "private": true,
   "dependencies": {
     "geomescript": "github:agonzalezl/geomescript",
@@ -14,12 +15,15 @@
     "@babel/preset-typescript": "^7.21.0",
     "@types/jest": "^29.5.0",
     "@types/react": "^18.0.29",
+    "gh-pages": "^5.0.0",
     "jest": "^29.5.0",
     "lerna": "^3.22.1",
     "prettier": "^2.8.7",
     "typescript": "^4.5.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "test": "jest",
     "prettier-format": "prettier 'src/**/*.ts' --write"
