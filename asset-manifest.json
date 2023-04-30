@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bouncing-objects-sandbox/static/css/main.69af281c.css",
+    "main.js": "/bouncing-objects-sandbox/static/js/main.86fa0ba0.js",
+    "index.html": "/bouncing-objects-sandbox/index.html",
+    "main.69af281c.css.map": "/bouncing-objects-sandbox/static/css/main.69af281c.css.map",
+    "main.86fa0ba0.js.map": "/bouncing-objects-sandbox/static/js/main.86fa0ba0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69af281c.css",
+    "static/js/main.86fa0ba0.js"
+  ]
+}
