@@ -24,6 +24,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "start": "react-scripts start",
     "test": "jest",
     "prettier-format": "prettier 'src/**/*.ts' --write"
