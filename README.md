@@ -7,3 +7,5 @@ In order to try it run
 npm install
 npm run start
 ```
+
+Check the live version [here](https://agonzalezl.github.io/bouncing-objects-sandbox/)
