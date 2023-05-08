@@ -187,10 +187,10 @@ function App() {
   [new Target(new Point(430, 620))]
 )
 
-  const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 });
-  const [click, setClick] = useState(false);
-  const [gameState, setGameState] = useState(initial_state);
-  const [camera] = useState(initialCamera);
+  let [mouseCoords] = useState({ x: 0, y: 0 });
+  let [click] = useState(false);
+  let [gameState] = useState(initial_state);
+  let [camera] = useState(initialCamera);
 
   const predraw = (context:any, canvas:any) => {
     context.save()
@@ -210,19 +210,19 @@ function App() {
     predraw(ctx, ctx.canvas)
     
     let new_state = gameplay(gameState, new Point(mouseCoords.x, mouseCoords.y), click)
-    setClick(false) // Fix!
-    setGameState(new_state)
+    click = false
+    gameState = new_state
     drawGameplay(gameState, ctx, camera)
     postdraw(ctx)
   }
 
   function handleCanvasMouseMove(x: any, y: any) {
     let point= camera.fromCanvasCoordinatesToMap(new Point(x, y));
-    setMouseCoords({ 'x': point.x, 'y':point.y });
+    mouseCoords = { 'x': point.x, 'y':point.y }
   }
 
   function handleCanvasClick(x: any, y: any) {
-    setClick(true);
+    click = true
   }
   
   return <Canvas draw={draw} options={{'context': '2d'}}
